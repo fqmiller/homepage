@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>F. Q. Miller — Author &amp; Researcher</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink: #33342f;
+    --paper: #f4f3ee;
+    --paper-dim: #e9e8e1;
+    --moss: #6b6c62;
+    --copper: #b5652d;
+    --mist: #94958c;
+    --line: rgba(51,52,47,0.14);
+  }
+
+  *{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+
+  body{
+    margin:0;
+    background-color: var(--paper);
+    background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%2795.26%27%20height%3D%27165.00%27%3E%0A%3Cpolygon%20points%3D%2795.26%2C82.50%2047.63%2C110.00%20-0.00%2C82.50%200.00%2C27.50%2047.63%2C0.00%2095.26%2C27.50%27%20fill%3D%27none%27%20stroke%3D%27rgba%2851%2C52%2C47%2C0.03%29%27%20stroke-width%3D%271%27/%3E%0A%3Cpolygon%20points%3D%2747.63%2C165.00%200.00%2C192.50%20-47.63%2C165.00%20-47.63%2C110.00%20-0.00%2C82.50%2047.63%2C110.00%27%20fill%3D%27none%27%20stroke%3D%27rgba%2851%2C52%2C47%2C0.03%29%27%20stroke-width%3D%271%27/%3E%0A%3Cpolygon%20points%3D%27142.89%2C165.00%2095.26%2C192.50%2047.63%2C165.00%2047.63%2C110.00%2095.26%2C82.50%20142.89%2C110.00%27%20fill%3D%27none%27%20stroke%3D%27rgba%2851%2C52%2C47%2C0.03%29%27%20stroke-width%3D%271%27/%3E%0A%3C/svg%3E");
+    background-repeat: repeat;
+    color: var(--ink);
+    font-family: 'Lora', serif;
+    font-size: 21px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a{ color: inherit; }
+
+  .wrap{
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+
+  .eyebrow{
+    font-family: 'Lora', serif;
+    font-size: 14px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--moss);
+  }
+
+  /* ---------- HERO ---------- */
+  header.hero{
+    padding: 96px 0 64px;
+  }
+  header.hero .wrap{
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    max-width: 1100px;
+  }
+
+  .hero-text{ flex: 1; min-width: 0; }
+
+  .hero-photo{
+    flex: 0 0 auto;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: var(--paper-dim);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--mist);
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    text-align: center;
+  }
+  .hero-photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+  }
+
+  h1.name{
+    font-family: 'Lora', serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: clamp(48px, 8.5vw, 108px);
+    line-height: 0.98;
+    letter-spacing: -0.01em;
+    margin: 18px 0 22px;
+    color: #24408f;
+  }
+  h1.name em{
+    font-style: normal;
+    font-weight: 500;
+    color: #24408f;
+  }
+
+  .tagline{
+    font-size: 23px;
+    max-width: 46ch;
+    color: var(--ink);
+    opacity: 0.86;
+    margin: 0;
+  }
+  .tagline br{
+    content: "";
+    display: block;
+    margin-top: 44px;
+  }
+
+  /* ---------- CREATIVE WORKS ---------- */
+  section.creative-works{
+    padding: 64px 0;
+  }
+  section.creative-works h3{
+    font-family: 'Lora', serif;
+    font-size: 22px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--ink);
+    margin: 0 0 12px;
+    font-weight: 700;
+  }
+  section.creative-works p{ margin: 0 0 20px; }
+
+  /* ---------- BIO ---------- */
+  section.bio{
+    padding: 64px 0;
+  }
+
+  .bio-col h3{
+    font-family: 'Lora', serif;
+    font-size: 22px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--ink);
+    margin: 0 0 12px;
+    font-weight: 700;
+  }
+  .bio-col p{ margin: 0 0 14px; }
+  .bio-list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .bio-list li{
+    padding: 12px 0;
+  }
+  .bio-list em{
+    font-style: normal;
+    font-family: 'Lora', serif;
+    font-weight: 500;
+  }
+  .pub-type{
+    color: #cb7b6f;
+    font-style: italic;
+    font-weight: 600;
+  }
+  .pub-summary{
+    margin: 6px 0 8px;
+    font-size: 16px;
+    color: var(--mist);
+    font-style: italic;
+    max-width: 62ch;
+  }
+  .pub-link{
+    font-family: 'Lora', serif;
+    font-size: 13px;
+    text-decoration: none;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 1px;
+    display: inline-block;
+    transition: border-color 0.2s ease, color 0.2s ease;
+  }
+  .pub-link:hover{
+    color: #cb7b6f;
+    border-color: #cb7b6f;
+  }
+  .bio-sublabel{
+    font-family: 'Lora', serif;
+    font-size: 19px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--mist);
+    margin: 26px 0 8px;
+    font-weight: 500;
+  }
+  .bio-sublabel:first-of-type{ margin-top: 22px; }
+
+  .lede{
+    font-size: 24px;
+    font-style: italic;
+    max-width: 64ch;
+    margin: 0 0 20px;
+    color: var(--ink);
+  }
+
+  /* ---------- WORK ---------- */
+  section.work{
+    padding: 64px 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .work-group{ margin-top: 34px; }
+  .work-group:first-of-type{ margin-top: 22px; }
+  .work-group h3{
+    font-family: 'Lora', serif;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--mist);
+    margin: 0 0 4px;
+    font-weight: 400;
+  }
+
+  .work-row{
+    display: flex;
+    align-items: baseline;
+    gap: 24px;
+    padding: 18px 0;
+    border-top: 1px solid var(--line);
+  }
+  .work-row:last-child{ border-bottom: 1px solid var(--line); }
+
+  .work-kind{
+    font-family: 'Lora', serif;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--mist);
+    flex: 0 0 90px;
+  }
+  .work-main{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+    min-width: 0;
+  }
+  .work-title{
+    font-family: 'Lora', serif;
+    font-size: 19px;
+    font-weight: 500;
+  }
+  .work-note{
+    font-size: 15px;
+    color: var(--mist);
+    font-style: italic;
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    padding: 56px 0 80px;
+  }
+  footer .wrap{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 20px;
+  }
+  .signature{
+    font-family: 'Lora', serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 25px;
+    color: var(--moss);
+  }
+  .contact-links{
+    font-family: 'Lora', serif;
+    font-size: 19px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 22px;
+    margin-top: 28px;
+  }
+  .contact-links a{
+    text-decoration: none;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 2px;
+    transition: border-color 0.2s ease, color 0.2s ease;
+  }
+  .contact-links a:hover{
+    color: #cb7b6f;
+    border-color: #cb7b6f;
+  }
+
+  @media (max-width: 640px){
+    header.hero{ padding: 64px 0 44px; }
+    header.hero .wrap{ flex-direction: column-reverse; gap: 28px; text-align: left; }
+    .hero-photo{ width: min(220px, 60vw); height: min(220px, 60vw); }
+    .work-row{ flex-wrap: wrap; }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior: auto; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-text">
+      <h1 class="name">F. Q. Miller</h1>
+      <p class="tagline">Speculative fiction author and information science researcher. Blending the imaginative reach of creative fiction and non-fiction with the empirical patience of collaborative social science research. Exploring how people, machines, and the living world are learning to co-exist, co-evolve, and share a future.</p>
+      <div class="contact-links">
+        <a href="mailto:faye@humanconstellation.org">Email</a>
+        <a href="#">Substack Newsletter</a>
+        <a href="#">Google Scholar</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">Bluesky</a>
+        <a href="#">Github</a>
+        <a href="#">ResearchGate</a>
+        <a href="#">Goodreads</a>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <img src="photo.jpg" alt="Portrait of F. Q. Miller">
+  </div>
+</header>
+
+<section class="creative-works">
+  <div class="wrap">
+    <h3>Creative Works</h3>
+    <p>Her first degree was in history, psychology, literature and creative writing, with a focus on short stories, novels, and screenplay writing. She writes speculative fiction in which technology and the natural world act as characters in the same story, each shaping and shaped by the humans caught between them.</p>
+    <ul class="bio-list">
+      <li>
+          <div><em>Natural Language</em> — <span class="pub-type">Novel</span>, forthcoming</div>
+          <p class="pub-summary">[Add a short summary of this project]</p>
+          <a class="pub-link" href="#">Read more →</a>
+        </li>
+      <li>
+          <div><em>A Trace of Her Hand</em> — <span class="pub-type">Story</span>, 2026</div>
+          <p class="pub-summary">[Add a short summary of this project]</p>
+          <a class="pub-link" href="#">Read more →</a>
+        </li>
+      <li>
+          <div><em>The Sojourner</em> — <span class="pub-type">Essay</span>, 2023</div>
+          <p class="pub-summary">[Add a short summary of this project]</p>
+          <a class="pub-link" href="#">Read more →</a>
+        </li>
+      <li>
+          <div><em>Universal Abstractions</em> — <span class="pub-type">Digital Artwork and Research Microfiction Collection</span>, 2024</div>
+          <p class="pub-summary">[Add a short summary of this project]</p>
+          <a class="pub-link" href="#">Read more →</a>
+        </li>
+      <li>
+          <div><em>Imaginative Storytelling Experiences</em> — <span class="pub-type">Film</span>, Producer/Writer/Co-Editor, 2016</div>
+          <p class="pub-summary">[Add a short summary of this project]</p>
+          <a class="pub-link" href="#">Read more →</a>
+        </li>
+    </ul>
+  </div>
+</section>
+
+<section class="bio">
+  <div class="wrap">
+    <div class="bio-col">
+      <h3>Social Research in Information and Technology</h3>
+      <p class="lede">How do people, and the more-than-human world around them, build shared understanding of complex systems — technological, ecological, and social — through everyday experience of information?</p>
+      <p>A Master's and PhD in information science ground her fiction in real questions and empirical findings from research communities. For over two decades she has conducted research and written fiction of a speculative nature, side by side, with each sharpening the other.</p>
+      <p class="bio-sublabel">Selected Publications</p>
+      <ul class="bio-list">
+        <li>
+          <div><em>Livestreaming as Therapy: Information Experiences on Reddit's Public Access Network</em> — <span class="pub-type">Article</span>, Information Research, 2026</div>
+          <p class="pub-summary">[Add a short summary of this project]</p>
+          <a class="pub-link" href="#">Read more →</a>
+        </li>
+        <li>
+          <div><em>Cultivating Epistemic Humility in Research Teams</em> — <span class="pub-type">Blog Post</span>, Integration and Implementation Insights, Australian National University, 2026</div>
+          <p class="pub-summary">[Add a short summary of this project]</p>
+          <a class="pub-link" href="#">Read more →</a>
+        </li>
+        <li>
+          <div><em>A Framework for Navigating the Impact of Using Artificial Intelligence on Collaborative Research Communication</em> — <span class="pub-type">Blog Post</span>, Integration and Implementation Insights, Australian National University, 2026</div>
+          <p class="pub-summary">[Add a short summary of this project]</p>
+          <a class="pub-link" href="#">Read more →</a>
+        </li>
+        <li>
+          <div><em>Transdisciplinarity</em> — <span class="pub-type">Book Chapter</span>, The Information Literacy Handbook: Charting the Discipline, Facet Publishing, 2025</div>
+          <p class="pub-summary">[Add a short summary of this project]</p>
+          <a class="pub-link" href="#">Read more →</a>
+        </li>
+        <li>
+          <div><em>Shared Understanding</em> — <span class="pub-type">Book Chapter</span>, The Encyclopedia of Interdisciplinarity and Transdisciplinarity, Edward Elgar Publishing, 2024</div>
+          <p class="pub-summary">[Add a short summary of this project]</p>
+          <a class="pub-link" href="#">Read more →</a>
+        </li>
+        <li>
+          <div><em>The Shared Understanding Playbook</em> — <span class="pub-type">Book</span>, Human Constellation Publishing, 2023</div>
+          <p class="pub-summary">[Add a short summary of this project]</p>
+          <a class="pub-link" href="#">Read more →</a>
+        </li>
+        <li>
+          <div><em>Producing Shared Understanding for Digital and Social Innovation</em> — <span class="pub-type">Book</span>, Palgrave Macmillan UK, 2020</div>
+          <p class="pub-summary">[Add a short summary of this project]</p>
+          <a class="pub-link" href="#">Read more →</a>
+        </li>
+        <li>
+          <div><em>Navigating Paradoxical Tensions Through "Both/And" Thinking</em> — <span class="pub-type">Blog Post</span>, Integration and Implementation Insights, Australian National University, 2020</div>
+          <p class="pub-summary">[Add a short summary of this project]</p>
+          <a class="pub-link" href="#">Read more →</a>
+        </li>
+        <li>
+          <div><em>Encountering Relatable Information in Experiential Learning Spaces</em> — <span class="pub-type">Article</span>, Journal of Documentation, 2019</div>
+          <p class="pub-summary">[Add a short summary of this project]</p>
+          <a class="pub-link" href="#">Read more →</a>
+        </li>
+        <li>
+          <div><em>Everyday Life Information Experiences in Twitter: A Grounded Theory</em> — <span class="pub-type">Article</span>, Information Research, 2019</div>
+          <p class="pub-summary">[Add a short summary of this project]</p>
+          <a class="pub-link" href="#">Read more →</a>
+        </li>
+        <li>
+          <div><em>Ethical Design Is the Answer to Some of Social Media's Problems</em> — <span class="pub-type">Media Article</span>, The Conversation, 2018</div>
+          <p class="pub-summary">[Add a short summary of this project]</p>
+          <a class="pub-link" href="#">Read more →</a>
+        </li>
+        <li>
+          <div><em>When Immersive Journalism Met Open Ethnography</em> — <span class="pub-type">Article</span>, Global Ethnographic, 2017</div>
+          <p class="pub-summary">[Add a short summary of this project]</p>
+          <a class="pub-link" href="#">Read more →</a>
+        </li>
+        <li>
+          <div><em>Designing Informal Learning Experiences for Early Career Academics Using a Knowledge Ecosystem Model</em> — <span class="pub-type">Article</span>, Journal of Further and Higher Education, 2016</div>
+          <p class="pub-summary">[Add a short summary of this project]</p>
+          <a class="pub-link" href="#">Read more →</a>
+        </li>
+        <li>
+          <div><em>How Retro Storytelling Can Help Boost Imaginative Capacity</em> — <span class="pub-type">Media Article</span>, The Conversation, 2016</div>
+          <p class="pub-summary">[Add a short summary of this project]</p>
+          <a class="pub-link" href="#">Read more →</a>
+        </li>
+        <li>
+          <div><em>Experiencing Information Use for Early Career Academics' Learning: A Knowledge Ecosystem Model</em> — <span class="pub-type">Article</span>, Journal of Documentation, 2015</div>
+          <p class="pub-summary">[Add a short summary of this project]</p>
+          <a class="pub-link" href="#">Read more →</a>
+        </li>
+        <li>
+          <div><em>Knowledge Ecosystems of Early Career Academics</em> — <span class="pub-type">Doctoral Thesis</span>, Queensland University of Technology, 2014</div>
+          <p class="pub-summary">[Add a short summary of this project]</p>
+          <a class="pub-link" href="#">Read more →</a>
+        </li>
+        <li>
+          <div><em>Researching User Experience: A Knowledge Ecology Model</em> — <span class="pub-type">Article</span>, Boxes and Arrows, San Francisco, 2013</div>
+          <p class="pub-summary">[Add a short summary of this project]</p>
+          <a class="pub-link" href="#">Read more →</a>
+        </li>
+        <li>
+          <div><em>Social interaction and the role of empathy in information and knowledge management: A literature review</em> — <span class="pub-type">Article</span>, Journal of Education for Library and Information Science, Chicago, 2011</div>
+          <p class="pub-summary">[Add a short summary of this project]</p>
+          <a class="pub-link" href="#">Read more →</a>
+        </li>
+        <li>
+          <div><em>Research Information Needs of Public Policy Oriented Researchers at a Regional University</em> — <span class="pub-type">Article</span>, Australian Academic &amp; Research Libraries, 2008</div>
+          <p class="pub-summary">[Add a short summary of this project]</p>
+          <a class="pub-link" href="#">Read more →</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
